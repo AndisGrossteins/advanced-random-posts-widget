@@ -1,13 +1,13 @@
 Advanced Random Posts Widget
 ===
-Easily display random posts in a widget. Allows you to display them with thumbnails, post excerpt, specific category and more.
+Provides flexible and advanced random posts widget. Allows you to display them with thumbnails, post excerpt, multiple category and more.
 
 ## Project detail
 Contributors: satrya  
 Donate link: http://satrya.me/donate/  
 Tags: random posts, random, thumbnails, widget, widgets, sidebar, excerpt, multiple widgets  
-Requires at least: 3.4  
-Tested up to: 3.5.1  
+Requires at least: 3.5  
+Tested up to: 3.6  
 Stable tag: 1.5  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
@@ -56,6 +56,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Add turn on off default styles
 * Add multiple category option
 * Add multiple tag option
+* Update language
 
 1.4 - 04/19/2013
 * Change support uri

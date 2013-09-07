@@ -276,6 +276,8 @@ class arpw_widget extends WP_Widget {
 
 	</div><!-- .arpw-columns-3 .arpw-column-last -->
 
+	<div class="clear"></div>
+
 	<?php
 	}
 

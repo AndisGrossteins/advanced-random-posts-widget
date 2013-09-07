@@ -65,6 +65,7 @@ This plugin creates custom image sizes. If you use images that were uploaded to 
 * Add turn on off default styles
 * Add multiple category option
 * Add multiple tag option
+* Update language
 
 = 1.4 - 04/19/2013 =
 * Change support uri
