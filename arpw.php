@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name:  Advanced Random Posts Widget
-Plugin URI:   http://wordpress.org/extend/plugins/advanced-random-posts-widget/
+Plugin URI:   http://wordpress.org/plugins/advanced-random-posts-widget/
 Description:  Enables advanced random posts widget.
 Version:      1.5
 Author:       Satrya
@@ -24,13 +24,13 @@ class ARP_Widget {
 	 */
 	public function __construct() {
 
-		add_action( 'plugins_loaded', array( &$this, 'constants' ), 1 );
+		add_action( 'plugins_loaded'       , array( &$this, 'constants' ), 1 );
 
-		add_action( 'plugins_loaded', array( &$this, 'i18n' ), 2 );
+		add_action( 'plugins_loaded'       , array( &$this, 'i18n' ), 2 );
 
-		add_action( 'plugins_loaded', array( &$this, 'includes' ), 3 );
+		add_action( 'plugins_loaded'       , array( &$this, 'includes' ), 3 );
 
-		add_action( 'init'          , array( &$this, 'init' ) );
+		add_action( 'admin_enqueue_scripts', array( &$this, 'admin_style' ) );
 
 	}
 
@@ -69,16 +69,12 @@ class ARP_Widget {
 	}
 
 	/**
-	 * Register custom style for the widget.
+	 * Register custom style for the widget setting.
 	 *
-	 * @since 1.0
+	 * @since 1.5
 	 */
-	function init() {
-		
-		if( ! is_admin() ) {
-			wp_enqueue_style( 'arpw-style', ARPW_URI . 'arpw.css' );
-		}
-
+	function admin_style() {
+		wp_enqueue_style( 'arpw-admin-style', ARPW_URI . 'includes/admin.css' );
 	}
 
 }

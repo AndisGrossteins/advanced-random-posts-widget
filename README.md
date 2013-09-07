@@ -35,6 +35,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Support `get_the_image` function.
 * Multiple widgets.
 
+#### New Features
+
+* CSS ID option
+* Widget title url
+* Turn on/off default style
+* Limit to spesfic or multiple category
+* Limit to spesfic or multiple tag
+
 ## Screenshot
 ![alt text](https://raw.github.com/satrya/advanced-random-posts-widget/master/screenshot-1.png "Advanced Random Posts Widget Plugin")
 
@@ -42,6 +50,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ```
 1.5 - 09/07/2013
 * Fix title widget filter bug
+* Change Limit option to input text rather than selectbox
+* Add CSS ID option
+* Add widget title url
+* Add turn on off default styles
+* Add multiple category option
+* Add multiple tag option
 
 1.4 - 04/19/2013
 * Change support uri
