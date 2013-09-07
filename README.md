@@ -8,14 +8,14 @@ Donate link: http://satrya.me/donate/
 Tags: random posts, random, thumbnails, widget, widgets, sidebar, excerpt, multiple widgets  
 Requires at least: 3.4  
 Tested up to: 3.5.1  
-Stable tag: 1.4  
+Stable tag: 1.5  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 ## Installation
 
 #### Manual
-* Go to [this page](http://wordpress.org/extend/plugins/advanced-random-posts-widget/), then download the plugin.
+* Go to [this page](http://wordpress.org/plugins/advanced-random-posts-widget/), then download the plugin.
 * Upload the **advanced-random-posts-widget** folder to the `/wp-content/plugins/` directory via your FTP.
 * Activate the plugin through the dashboard.
 * Go to the Widgets page.
@@ -40,6 +40,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 ```
+1.5 - 09/07/2013
+* Fix title widget filter bug
+
 1.4 - 04/19/2013
 * Change support uri
 

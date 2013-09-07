@@ -31,7 +31,7 @@ class arpw_widget extends WP_Widget {
 	function widget( $args, $instance ) {
 		extract( $args, EXTR_SKIP );
  
-		$title = apply_filters( 'widget_title', $instance['title'] );
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		$limit = $instance['limit'];
 		$excerpt = $instance['excerpt'];
 		$length = (int)( $instance['length'] );
