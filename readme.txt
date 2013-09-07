@@ -3,7 +3,7 @@ Contributors: satrya
 Tags: random posts, random, thumbnails, widget, widgets, sidebar, excerpt, multiple widgets
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.5
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,7 +56,10 @@ This plugin creates custom image sizes. If you use images that were uploaded to 
 
 == Changelog ==
 
-1.5 - 09/07/2013
+= 1.5.1 - 09/07/2013 =
+* Forgot to commit `admin.css`
+
+= 1.5 - 09/07/2013 =
 * PLEASE RE-SAVE THE WIDGET
 * Fix title widget filter bug
 * Change Limit option to input text rather than selectbox
