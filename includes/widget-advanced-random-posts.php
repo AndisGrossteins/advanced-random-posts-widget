@@ -42,6 +42,7 @@ class arpw_widget extends WP_Widget {
 		$thumb_width  = (int)( $instance['thumb_width'] );
 		$cat          = $instance['cat'];
 		$tag          = $instance['tag'];
+		$type         = $instance['type'];
 		$date         = $instance['date'];
 		$css          = wp_filter_nohtml_kses( $instance['css'] );
 		$css_id       = $instance['css_id'];
@@ -66,7 +67,7 @@ class arpw_widget extends WP_Widget {
 				'numberposts'  => $limit,
 				'category__in' => $cat,
 				'tag__in'      => $tag,
-				'post_type'    => 'post',
+				'post_type'    => ( empty($type) ? 'post' : $type ),
 				'orderby'      => 'rand'
 			);
 
@@ -137,6 +138,7 @@ class arpw_widget extends WP_Widget {
 		$instance['thumb_width']  = (int)( $new_instance['thumb_width'] );
 		$instance['cat']          = $new_instance['cat'];
 		$instance['tag']          = $new_instance['tag'];
+		$instance['type']         = $new_instance['type'];
 		$instance['date']         = $new_instance['date'];
 		$instance['css']          = wp_filter_nohtml_kses( $new_instance['css'] );
 		$instance['css_id']       = sanitize_html_class( $new_instance['css_id'] );
@@ -163,6 +165,7 @@ class arpw_widget extends WP_Widget {
             'thumb_width'  => 45,
             'cat'          => '',
             'tag'          => '',
+            'type'		   => 'post',
             'date'         => true,
             'css'          => '',
             'css_id'       => '',
@@ -180,6 +183,7 @@ class arpw_widget extends WP_Widget {
 		$thumb_width  = (int)( $instance['thumb_width'] );
 		$cat          = $instance['cat'];
 		$tag          = $instance['tag'];
+		$type		  = $instance['type'];
 		$date         = $instance['date'];
 		$css          = wp_filter_nohtml_kses( $instance['css'] );
 		$css_id       = $instance['css_id'];
@@ -237,6 +241,17 @@ class arpw_widget extends WP_Widget {
 					<?php $tags = get_terms( 'post_tag' ); ?>
 					<?php foreach( $tags as $post_tag ) { ?>
 						<option value="<?php echo $post_tag->term_id; ?>" <?php if ( is_array( $tag ) && in_array( $post_tag->term_id, $tag ) ) echo ' selected="selected"'; ?>><?php echo $post_tag->name; ?></option>
+					<?php } ?>
+				</optgroup>
+			</select>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"><?php _e( 'Limit to specific custom post type: ', 'arpw' ); ?></label>
+		   	<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>" style="width:100%;">
+				<optgroup label="Custom Post Types">
+					<?php $post_types = get_post_types( array('public'=>true,'publicly_queryable'=>true), 'ojects' ); ?>
+					<?php foreach( $post_types as $post_type ) { ?>
+						<option value="<?php echo $post_type->name; ?>" <?php if ( $post_type->name == $type ) echo ' selected="selected"'; ?>><?php echo $post_type->label; ?></option>
 					<?php } ?>
 				</optgroup>
 			</select>
